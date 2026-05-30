@@ -139,27 +139,6 @@
   <div id="stakeholdersContent">Cargando contenido...</div>
 </div>
 
-<!-- Librería para convertir Markdown a HTML -->
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-  // Función para cargar y renderizar Markdown desde GitHub
-  function loadMarkdown(url, elementId) {
-    fetch(url)
-      .then(response => response.text())
-      .then(text => {
-        document.getElementById(elementId).innerHTML = marked.parse(text);
-      })
-      .catch(error => {
-        document.getElementById(elementId).textContent = "Error al cargar el documento.";
-        console.error(error);
-      });
-  }
-
-  // Cargar tus archivos desde GitHub (usar el raw.githubusercontent.com)
-  loadMarkdown("https://raw.githubusercontent.com/fernando6489/wfvh-solutions-web/main/docs/Vision.md", "visionContent");
-  loadMarkdown("https://raw.githubusercontent.com/fernando6489/wfvh-solutions-web/main/docs/Stakeholders.md", "stakeholdersContent");
-</script>
-
   <div class="card">
   
 </div>
