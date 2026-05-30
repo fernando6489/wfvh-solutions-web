@@ -29,7 +29,7 @@
     }
     .container {
       max-width: 1200px;
-      margin: 150px auto 40px; /* espacio superior para que el contenido quede m��s abajo */
+      margin: 150px auto 40px; /* espacio superior para que el contenido quede m¨¢s abajo */
       padding: 0 20px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -77,13 +77,13 @@
 </head>
 <body>
   <header>
-    <h1>📂 Dashboard - Gestor Documental</h1>
+    <h1>ðŸ“‚ Dashboard - Gestor Documental</h1>
     <p>WFVH Solutions</p>
   </header>
 
   <div class="container">
     <div class="card">
-      <h2>🎯 Metas del Sprint</h2>
+      <h2>ðŸŽ¯ Metas del Sprint</h2>
       <ul>
         <p>Implementar carga de documentos</p>
         <p>Disenar busqueda avanzada</p>
@@ -92,13 +92,13 @@
     </div>
 
     <div class="card">
-      <h2>👥 Participantes</h2>
+      <h2>ðŸ‘¥ Participantes</h2>
       <p>Equipo de Desarrollo WFVH Solutions</p>
       <p>Cliente: Consorcio MEB</p>
     </div>
 
     <div class="card">
-      <h2>📌 Checklist</h2>
+      <h2>ðŸ“Œ Checklist</h2>
       <ul>
         <p>Diseno de interfaz</p>
         <p>Configuracion de base de datos</p>
@@ -107,7 +107,7 @@
     </div>
 
     <div class="card">
-      <h2>⚠️ Riesgos</h2>
+      <h2>âš ï¸ Riesgos</h2>
       <ul>
         <p>Retrasos en integracion</p>
         <p>Problemas de seguridad</p>
@@ -116,22 +116,55 @@
     </div>
 
     <div class="card">
-      <h2>📊 Decisiones</h2>
+      <h2>ðŸ“Š Decisiones</h2>
       <p>Se priorizo la busqueda avanzada y el control de versiones como funcionalidades criticas.</p>
     </div>
 
     <div class="card">
-      <h2>📥 Simulacion de carga</h2>
+      <h2>ðŸ“¥ Simulacion de carga</h2>
       <input type="text" id="docName" placeholder="Nombre del documento">
       <button onclick="uploadDocument()">Cargar Documento</button>
       <p id="uploadResult"></p>
     </div>
   </div>
+
+  <!-- Añadir estas tarjetas dentro del <div class="container"> -->
+<div class="card">
+  <h2>📖 Documento de Visión</h2>
+  <div id="visionContent">Cargando contenido...</div>
+</div>
+
+<div class="card">
+  <h2>👥 Stakeholders</h2>
+  <div id="stakeholdersContent">Cargando contenido...</div>
+</div>
+
+<!-- Librería para convertir Markdown a HTML -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  // Función para cargar y renderizar Markdown desde GitHub
+  function loadMarkdown(url, elementId) {
+    fetch(url)
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById(elementId).innerHTML = marked.parse(text);
+      })
+      .catch(error => {
+        document.getElementById(elementId).textContent = "Error al cargar el documento.";
+        console.error(error);
+      });
+  }
+
+  // Cargar tus archivos desde GitHub (usar el raw.githubusercontent.com)
+  loadMarkdown("https://raw.githubusercontent.com/fernando6489/wfvh-solutions-web/main/docs/Vision.md", "visionContent");
+  loadMarkdown("https://raw.githubusercontent.com/fernando6489/wfvh-solutions-web/main/docs/Stakeholders.md", "stakeholdersContent");
+</script>
+
   <div class="card">
   
 </div>
   <footer>
-    <p>© 2026 WFVH Solutions | Proyecto Gestor Documental</p>
+    <p>Â© 2026 WFVH Solutions | Proyecto Gestor Documental</p>
   </footer>
 
   <script>
