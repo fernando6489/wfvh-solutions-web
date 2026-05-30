@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>DocuFlow</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f0f2f5;
+      color: #333;
+      padding-top: 5px; /* espacio para header fijo */
+      padding-bottom: 25px; /* espacio para footer fijo */
+    }
+ header {
+      background: linear-gradient(90deg, #1e3c72, #2a5298);
+      color: #fff;
+      padding: 5px;
+      text-align: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 150px auto 40px; /* espacio superior para que el contenido quede m��s abajo */
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card h2 {
+      margin-top: 0;
+      color: #2a5298;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "?? ";
+    }
+    footer {
+      background: #2a5298;
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+    }
+    button {
+      background: #2a5298;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e3c72;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>📂 Dashboard - Gestor Documental</h1>
+    <p>WFVH Solutions</p>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>🎯 Metas del Sprint</h2>
+      <ul>
+        <p>Implementar carga de documentos</p>
+        <p>Disenar busqueda avanzada</p>
+       <p>Configurar control de versiones</p>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>👥 Participantes</h2>
+      <p>Equipo de Desarrollo WFVH Solutions</p>
+      <p>Cliente: Consorcio MEB</p>
+    </div>
+
+    <div class="card">
+      <h2>📌 Checklist</h2>
+      <ul>
+        <p>Diseno de interfaz</p>
+        <p>Configuracion de base de datos</p>
+        <p>Pruebas unitarias</p>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>⚠️ Riesgos</h2>
+      <ul>
+        <p>Retrasos en integracion</p>
+        <p>Problemas de seguridad</p>
+        <p>Resistencia al cambio</p>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>📊 Decisiones</h2>
+      <p>Se priorizo la busqueda avanzada y el control de versiones como funcionalidades criticas.</p>
+    </div>
+
+    <div class="card">
+      <h2>📥 Simulacion de carga</h2>
+      <input type="text" id="docName" placeholder="Nombre del documento">
+      <button onclick="uploadDocument()">Cargar Documento</button>
+      <p id="uploadResult"></p>
+    </div>
+  </div>
+  <div class="card">
+  
+</div>
+  <footer>
+    <p>© 2026 WFVH Solutions | Proyecto Gestor Documental</p>
+  </footer>
+
+  <script>
+    // Logica basica en JavaScript
+    function uploadDocument() {
+      const name = document.getElementById("docName").value;
+      const result = document.getElementById("uploadResult");
+      if (!name) {
+        result.textContent = "Error: nombre de documento invalido";
+        result.style.color = "red";
+      } else {
+        result.textContent = `Documento "${name}" cargado correctamente`;
+        result.style.color = "green";
+      }
+    }
+  </script>
+</body>
+</html>
