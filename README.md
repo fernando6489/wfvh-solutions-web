@@ -1,6 +1,8 @@
-# wfvh-solutions-web
+# 📑 wfvh-solutions-web – WFVH Solutions
 
-# 📑 Creación de página web – WFVH Solutions
+## 📂 Creación de página web – Sistema Web para Gestión Documental
+
+---
 
 ## 1. Documento de Visión del Proyecto
 **Información general**
@@ -42,7 +44,6 @@ No incluye:
 ---
 
 ## 2. Identificación de Stakeholders
-
 | Stakeholder       | Cargo              | Interés | Influencia |
 |-------------------|--------------------|---------|------------|
 | María López       | Gerente General    | Alto    | Alto       |
@@ -54,7 +55,6 @@ No incluye:
 ---
 
 ## 3. Elicitación de Requisitos
-
 **Entrevista a la Gerente**  
 - Problema actual: dificultad para localizar documentos y riesgo de pérdida.  
 - Deseo de mejora: acceso rápido y seguro desde cualquier lugar.  
@@ -77,7 +77,6 @@ No incluye:
 ---
 
 ## 4. Catálogo de Requisitos
-
 **Requisitos funcionales**  
 - RF-001: El usuario podrá registrarse mediante correo electrónico.  
 - RF-002: El usuario podrá iniciar sesión.  
@@ -107,6 +106,8 @@ No incluye:
 ## 6. Prototipos funcionales
 Maquetación inicial en HTML/CSS con dashboard tipo cards: carga, búsqueda, reportes.  
 
+👉 [Ver Dashboard XP en GitHub Pages](https://fernando6489.github.io/wfvh-solutions-web/)  
+
 ---
 
 ## 7. Reglas de negocio
@@ -117,7 +118,6 @@ Maquetación inicial en HTML/CSS con dashboard tipo cards: carga, búsqueda, rep
 ---
 
 ## 8. Priorización MoSCoW
-
 | Requisito            | Prioridad   |
 |-----------------------|-------------|
 | Búsqueda avanzada     | Must Have   |
@@ -129,7 +129,6 @@ Maquetación inicial en HTML/CSS con dashboard tipo cards: carga, búsqueda, rep
 ---
 
 ## 9. Matriz de trazabilidad
-
 | Requisito | Caso de uso | Prueba |
 |-----------|-------------|--------|
 | RF-003    | CU-Cargar   | TP-01  |
@@ -152,3 +151,51 @@ Maquetación inicial en HTML/CSS con dashboard tipo cards: carga, búsqueda, rep
 **Firma de aprobación:**  
 Gerente: ___________________  
 Analista: ___________________  
+
+---
+
+# 📖 Metodología XP aplicada
+
+## Principios XP
+- Comunicación constante con el cliente.  
+- Simplicidad en el diseño.  
+- Retroalimentación rápida mediante pruebas y entregas frecuentes.  
+- Coraje y respeto dentro del equipo.  
+
+## Artefactos XP
+### Historias de Usuario
+- Como usuario quiero cargar documentos para gestionarlos fácilmente.  
+- Como administrador quiero controlar versiones para mantener trazabilidad.  
+- Como cliente quiero buscar documentos con filtros avanzados.  
+
+### Tablero de Tareas
+| Pendiente              | En Progreso           | Completado        |
+|------------------------|-----------------------|-------------------|
+| Diseño interfaz        | Configuración BD      | Pruebas unitarias |
+
+### Pruebas
+- Pruebas unitarias en módulos clave.  
+- Simulación de carga de documentos.  
+- Validación de seguridad y control de versiones.  
+
+### Integración Continua
+- Configuración de **GitHub Actions** para builds automáticos.  
+- Despliegue en **GitHub Pages** para visualización del dashboard.  
+
+---
+
+## 📸 Evidencia práctica del proyecto
+- Dashboard interactivo con simulación de carga de documentos.  
+- Tablero de tareas XP integrado en la interfaz.  
+- Documentación mínima y viva en este README.md.  
+- Participación activa del equipo y retroalimentación del cliente.  
+
+---
+
+## 👥 Equipo
+- **Product Owner**: Wladimir  
+- **Scrum Master**: [Nombre]  
+- **Developers**: [Nombres]  
+- **Cliente**: Consorcio MEB  
+
+---
